@@ -72,7 +72,7 @@ export default function Login() {
               </button>
             </div>
 
-            <Error message="There was an error" />
+            {/* <Error message="There was an error" /> */}
           </form>
         </div>
       </div>
