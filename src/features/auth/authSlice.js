@@ -4,19 +4,20 @@ const initialState = {
   accessToken: undefined,
   user: undefined,
 };
+console.log(initialState);
 const authSlice = createSlice({
-  name: "authAPi",
+  name: "auth",
   initialState,
   reducers: {
     userLoggedIn: (state, action) => {
       state.accessToken = action.payload.accessToken;
       state.user = action.payload.user;
     },
-    useLoggedOut: (state) => {
+    userLoggedOut: (state) => {
       state.accessToken = undefined;
       state.user = undefined;
     },
   },
 });
-export const { userLoggedIn, useLoggedOut } = authSlice.actions;
+export const { userLoggedIn, userLoggedOut } = authSlice.actions;
 export default authSlice;
